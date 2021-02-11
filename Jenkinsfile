@@ -8,6 +8,7 @@ pipeline{
             steps {
                
                     sh "helm repo add sahil ${repo}"
+                    sh "sleep 2m"
               
             }
         }
@@ -16,7 +17,7 @@ pipeline{
                 script{
 										openshift.withCluster(){
                        
-                            sh "helm upgrade --install my-guestbook sahil/demo-helm-example --values demo-helm-example/values.yaml -n dev --wait"
+                            sh "helm upgrade --install sampleapp sahil/demo-helm-example --values demo-helm-example/values.yaml -n dev --wait"
                         
                     }
                 }
