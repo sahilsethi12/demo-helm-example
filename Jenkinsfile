@@ -8,7 +8,6 @@ pipeline{
             steps {
                
                     sh "helm repo add sahil ${repo}"
-                    sh "sleep 2m"
               
             }
         }
