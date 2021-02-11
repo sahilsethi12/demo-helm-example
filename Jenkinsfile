@@ -16,7 +16,7 @@ pipeline{
                 script{
 										openshift.withCluster(){
                        
-                            sh "helm upgrade --install my-guestbook sahil/sample-helm-chart --values sample-helm-chart/values.yaml -n dev --wait"
+                            sh "helm upgrade --install my-guestbook sahil/demo-helm-example --values demo-helm-example/values.yaml -n dev --wait"
                         
                     }
                 }
